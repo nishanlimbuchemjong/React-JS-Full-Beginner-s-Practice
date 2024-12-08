@@ -21,6 +21,21 @@ export default function TextForm(props) {
         setText(newText)
     }
 
+    const handleCopyText = () => {
+        console.log("Copy button clicked.");
+        navigator.clipboard.writeText(text);
+      };
+
+      const handleTitleCase = () => {
+        console.log("Title Case button clicked.");
+        let newText = text
+          .toLowerCase()
+          .split(' ')
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+        setText(newText);
+      };
+
     const handleOnChange = (event) =>{
         console.log("On change")
         setText(event.target.value)
@@ -33,6 +48,9 @@ export default function TextForm(props) {
         <button className="btn btn-outline-primary mx-2" onClick={handleUpperCase}>Convert to UpperCase</button>
         <button className="btn btn-outline-primary mx-2" onClick={handleLowerCase}>Convert to LowerCase</button>
         <button className="btn btn-outline-primary mx-2" onClick={handleClearText}>Clear Text</button>
+        <button className="btn btn-outline-primary mx-2" onClick={handleCopyText}>Copy Text</button>
+        <button className="btn btn-outline-primary mx-2" onClick={handleTitleCase}>Title Case
+        </button>
     </div>
     <div className="container my-3">
         <h1>Text Summary</h1>
