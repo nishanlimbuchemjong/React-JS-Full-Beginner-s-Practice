@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+let name='Nishan Limbuy'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with Nishan Limbu
-        </a>
-      </header>
+    <>
+    <nav>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </nav><br />
+    <h1>Welcome to {name} React Practice</h1>
+    <div className="container">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, nostrum, voluptatem, in deleniti maiores eos alias rem aspernatur impedit tenetur unde sed! Blanditiis optio, architecto deleniti provident nobis minus velit.</p>
     </div>
+
+    </>
+    
   );
 }
 
