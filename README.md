@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# React-JS-Full-Beginner-s-Practice
+
+I have practice React JS watching the video of YouTube channel: freeCodeCamp.org, where Bob Ziroll have taught all the topics that are required in React JS.
+
+>>>>>>> 945699821b23691f563819e0e193297acc1376cf
