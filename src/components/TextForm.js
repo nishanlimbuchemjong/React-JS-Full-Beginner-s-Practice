@@ -42,17 +42,17 @@ export default function TextForm(props) {
     }
   return (
     <>
-    <div className="container mb-3">
+    <div className="container mb-3" style={{color: props.mode === 'dark' ? 'white' : 'light'}}>
         <h1>{props.heading}</h1>
-        <textarea className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"></textarea><br/>
-        <button className="btn btn-outline-primary mx-2" onClick={handleUpperCase}>Convert to UpperCase</button>
-        <button className="btn btn-outline-primary mx-2" onClick={handleLowerCase}>Convert to LowerCase</button>
-        <button className="btn btn-outline-primary mx-2" onClick={handleClearText}>Clear Text</button>
-        <button className="btn btn-outline-primary mx-2" onClick={handleCopyText}>Copy Text</button>
-        <button className="btn btn-outline-primary mx-2" onClick={handleTitleCase}>Title Case
+        <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : 'light'}} id="exampleFormControlTextarea1" rows="8"></textarea><br/>
+        <button className="btn btn-primary mx-2" onClick={handleUpperCase}>Convert to UpperCase</button>
+        <button className="btn btn-primary mx-2" onClick={handleLowerCase}>Convert to LowerCase</button>
+        <button className="btn btn-primary mx-2" onClick={handleClearText}>Clear Text</button>
+        <button className="btn btn-primary mx-2" onClick={handleCopyText}>Copy Text</button>
+        <button className="btn btn-primary mx-2" onClick={handleTitleCase}>Title Case
         </button>
     </div>
-    <div className="container my-3">
+    <div className="container my-3" style={{color: props.mode === 'dark' ? 'white' : 'light'}}>
         <h1>Text Summary</h1>
         <p>Total Word : {text.split(" ").length}</p>
         <p>Total Character : {text.length}</p>
