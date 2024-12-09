@@ -4,26 +4,30 @@ export default function TextForm(props) {
     const [text, setText] = useState('Enter text here');
 
     const handleUpperCase = () =>{
-        console.log("Uppercase button clicked.")
+        console.log("Uppercase button clicked.");
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to UpperCase", "success");
     }
 
     const handleLowerCase = () =>{
-        console.log("Lowercase button clicked.")
+        console.log("Lowercase button clicked.");
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert("Converted to LowerCase", "success");
     }
 
     const handleClearText = () =>{
         console.log("ClearText button clicked.")
         let newText = '';
         setText(newText)
+        props.showAlert("All Text Cleared", "success");
     }
 
     const handleCopyText = () => {
         console.log("Copy button clicked.");
         navigator.clipboard.writeText(text);
+        props.showAlert("The text is copied", "success");
       };
 
       const handleTitleCase = () => {
@@ -34,6 +38,7 @@ export default function TextForm(props) {
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ');
         setText(newText);
+        props.showAlert("Converted to Title Case", "success");
       };
 
     const handleOnChange = (event) =>{
